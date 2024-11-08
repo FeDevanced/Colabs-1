@@ -1,28 +1,397 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Co-Labs 1</title>
-    <meta name="description" content="Website Description">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/x-icon" href="Assets/icon.png">
-    
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="styles.css">
-    
-    <!-- Lato Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Automotive Company</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: Futura, sans-serif;
+      color: #333;
+    }
+
+    /* Navbar styling */
+    .navbar {
+      padding: 8px 20px;
+    }
+
+    /* Hero section styling */
+    .hero-section {
+      background-image: url('assets/car-14.avif');
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      padding: 250px 0;
+      text-align: center;
+    }
+
+    .hero-title {
+      font-size: 4rem;
+      font-weight: bold;
+      filter: drop-shadow(5px 5px 10px #000000);
+    }
+
+    .slogan {
+      font-size: 1.5rem;
+      margin-bottom: 30px;
+      filter: drop-shadow(5px 5px 10px #000000);
+    }
+
+    /* Section heading styling */
+    .section-heading {
+      text-align: center;
+      margin-top: 50px;
+      font-size: 2rem;
+    }
+
+    .section-content {
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* Card styling */
+    .custom-card {
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      padding: 100px 20px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .custom-card .btn {
+      background-color: rgba(0, 0, 0, 0.6);
+      border: none;
+      margin-top: 16px;
+    }
+
+    /* Footer styling */
+    .footer {
+      background-color: #f8f9fa;
+      padding: 40px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+    .btn{
+      background-color: #EF762E;
+      --bs-btn-border-color: #EF762E;
+      --bs-btn-hover-bg: #a14e1d;
+      --bs-btn-hover-border-color: #a14e1d;
+      --bs-btn-active-bg: #EF762E;
+      --bs-btn-hover-active-color: #EF762E;
+      --bs-btn-active-border-color: #EF762E;
+    }
+  </style>
 </head>
 <body>
-    <h1>Stop stalking there's nothing here</h1>
 
-  <!-- Bootstrap Script -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<!--Navbar-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container d-flex flex-column align-items-center">
+    <a style="margin-bottom: 8px" class="navbar-brand" href="#">
+      <svg style="margin-right: 8px" width="48px" height="48px" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 233.3 224.93">
+        <defs>
+          <style>
+            .cls-1 {
+              fill: #414042;
+            }
+          </style>
+        </defs>
+        <g>
+          <g>
+            <g>
+              <g>
+                <g>
+                  <polygon class="cls-1" points="20.92 170.23 21.21 164.24 80.2 164.24 83.2 167.24 83.2 172.91 79.91 175.9 20.92 170.23"/>
+                  <path d="M80.2,167.24v5.67l-58.99-5.67h58.99M80.2,161.24H21.21l-.57,11.97,58.99,5.67,6.57-5.97v-5.67l-6-6h0Z"/>
+                </g>
+                <g>
+                  <polygon points="21.21 170.24 20.92 164.26 79.91 158.59 83.2 161.58 83.2 167.24 80.2 170.24 21.21 170.24"/>
+                  <path d="M80.2,161.58v5.67H21.21l58.99-5.67M79.62,155.6l-58.99,5.67.57,11.97h58.99l6-6v-5.67l-6.57-5.97h0Z"/>
+                </g>
+              </g>
+              <g>
+                <g>
+                  <polygon class="cls-1" points="82.85 171.52 83.98 167.27 89.31 164.44 93.42 165.78 117.59 215.67 112.35 218.57 82.85 171.52"/>
+                  <path d="M90.72,167.09l24.16,49.89-29.49-47.05,5.33-2.83M87.91,161.79l-5.33,2.83-2.27,8.48,29.49,47.05,10.48-5.8-24.16-49.89-8.22-2.68h0Z"/>
+                </g>
+                <g>
+                  <polygon points="77.71 174.61 78.65 170.11 83.98 167.27 87.93 168.33 117.43 215.38 112.53 218.83 77.71 174.61"/>
+                  <path d="M85.39,169.92l29.49,47.05-34.82-44.22,5.33-2.83M82.58,164.62l-5.33,2.83-1.9,9.01,34.82,44.22,9.8-6.9-29.49-47.05-7.9-2.11h0Z"/>
+                </g>
+              </g>
+              <g>
+                <g>
+                  <polygon class="cls-1" points="83.98 167.18 82.85 162.94 112.35 115.89 117.59 118.79 93.42 168.68 89.31 170.02 83.98 167.18"/>
+                  <path d="M114.89,117.48l-24.16,49.89-5.33-2.83,29.49-47.05M109.8,114.29l-29.49,47.05,2.27,8.48,5.33,2.83,8.22-2.68,24.16-49.89-10.48-5.8h0Z"/>
+                </g>
+                <g>
+                  <polygon points="78.65 164.35 77.71 159.84 112.53 115.62 117.43 119.07 87.93 166.13 83.98 167.18 78.65 164.35"/>
+                  <path d="M114.89,117.48l-29.49,47.05-5.33-2.83,34.82-44.22M110.17,113.77l-34.82,44.22,1.9,9.01,5.33,2.83,7.9-2.11,29.49-47.05-9.8-6.9h0Z"/>
+                </g>
+              </g>
+              <g>
+                <polygon points="77.2 172.95 77.06 161.74 81.47 159.05 91.89 164.6 91.93 169.87 81.64 175.54 77.2 172.95"/>
+                <path d="M80.06,161.7l10.42,5.54-10.29,5.67-.13-11.21M82.88,156.4l-8.82,5.37.13,11.21,8.89,5.18,10.29-5.67-.08-10.55-10.42-5.54h0Z"/>
+              </g>
+            </g>
+            <g>
+              <g>
+                <g>
+                  <polygon class="cls-1" points="153.81 170.21 150.81 167.21 150.81 161.54 154.1 158.56 213.09 164.23 212.8 170.21 153.81 170.21"/>
+                  <path d="M153.81,161.54l58.99,5.67h-58.99v-5.67M154.38,155.57l-6.57,5.97v5.67l6,6h58.99l.57-11.97-58.99-5.67h0Z"/>
+                </g>
+                <g>
+                  <polygon points="150.81 172.88 150.81 167.21 153.81 164.21 212.8 164.21 213.09 170.2 154.1 175.87 150.81 172.88"/>
+                  <path d="M212.8,167.21l-58.99,5.67v-5.67h58.99M212.8,161.21h-58.99l-6,6v5.67l6.57,5.97,58.99-5.67-.57-11.97h0Z"/>
+                </g>
+              </g>
+              <g>
+                <g>
+                  <polygon class="cls-1" points="140.58 168.68 116.42 118.79 121.66 115.89 151.16 162.94 150.02 167.18 144.69 170.02 140.58 168.68"/>
+                  <path d="M119.12,117.48l29.49,47.05-5.33,2.83-24.16-49.89M124.2,114.29l-10.48,5.8,24.16,49.89,8.22,2.68,5.33-2.83,2.27-8.48-29.49-47.05h0Z"/>
+                </g>
+                <g>
+                  <polygon points="146.07 166.13 116.58 119.07 121.47 115.62 156.3 159.84 155.35 164.35 150.02 167.18 146.07 166.13"/>
+                  <path d="M119.12,117.48l34.82,44.22-5.33,2.83-29.49-47.05M123.83,113.77l-9.8,6.9,29.49,47.05,7.9,2.11,5.33-2.83,1.9-9.01-34.82-44.22h0Z"/>
+                </g>
+              </g>
+              <g>
+                <g>
+                  <polygon class="cls-1" points="116.42 215.67 140.58 165.78 144.69 164.44 150.02 167.27 151.16 171.52 121.66 218.57 116.42 215.67"/>
+                  <path d="M143.28,167.09l5.33,2.83-29.49,47.05,24.16-49.89M146.1,161.79l-8.22,2.68-24.16,49.89,10.48,5.8,29.49-47.05-2.27-8.48-5.33-2.83h0Z"/>
+                </g>
+                <g>
+                  <polygon points="116.58 215.38 146.07 168.33 150.02 167.27 155.35 170.11 156.3 174.61 121.47 218.83 116.58 215.38"/>
+                  <path d="M148.61,169.92l5.33,2.83-34.82,44.22,29.49-47.05M151.43,164.62l-7.9,2.11-29.49,47.05,9.8,6.9,34.82-44.22-1.9-9.01-5.33-2.83h0Z"/>
+                </g>
+              </g>
+              <g>
+                <polygon points="142.11 169.86 142.07 164.59 152.36 158.92 156.81 161.51 156.94 172.72 152.53 175.4 142.11 169.86"/>
+                <path d="M153.81,161.54l.13,11.21-10.42-5.54,10.29-5.67M150.91,156.29l-10.29,5.67.08,10.55,10.42,5.54,8.82-5.37-.13-11.21-8.89-5.18h0Z"/>
+              </g>
+            </g>
+          </g>
+          <g>
+            <g>
+              <g>
+                <polygon class="cls-1" points="122.53 113.88 122.82 107.89 181.81 107.89 184.81 110.89 184.81 116.64 181.51 119.63 122.53 113.88"/>
+                <path d="M181.81,110.89v5.75l-58.99-5.75h58.99M181.81,104.89h-58.99l-.58,11.97,58.99,5.75,6.58-5.97v-5.75l-6-6h0Z"/>
+              </g>
+              <g>
+                <polygon points="122.82 113.89 122.53 107.91 181.51 102.16 184.81 105.15 184.81 110.89 181.81 113.89 122.82 113.89"/>
+                <path d="M181.81,105.15v5.75h-58.99l58.99-5.75M181.22,99.17l-58.99,5.75.58,11.97h58.99l6-6v-5.75l-6.58-5.97h0Z"/>
+              </g>
+            </g>
+            <g>
+              <g>
+                <polygon class="cls-1" points="184.45 115.18 185.58 110.97 190.91 108.09 195.04 109.44 219.2 160.02 213.95 162.89 184.45 115.18"/>
+                <path d="M192.33,110.73l24.16,50.58-29.49-47.71,5.33-2.87M189.48,105.45l-5.33,2.87-2.26,8.44,29.49,47.71,10.52-5.74-24.16-50.58-8.26-2.69h0Z"/>
+              </g>
+              <g>
+                <polygon points="179.3 118.32 180.25 113.84 185.58 110.97 189.55 112.03 219.05 159.74 214.13 163.16 179.3 118.32"/>
+                <path d="M187,113.61l29.49,47.71-34.82-44.83,5.33-2.87M184.15,108.33l-5.33,2.87-1.89,8.96,34.82,44.83,9.84-6.84-29.49-47.71-7.95-2.13h0Z"/>
+              </g>
+            </g>
+            <g>
+              <g>
+                <polygon class="cls-1" points="185.58 110.79 184.45 106.57 213.95 58.86 219.2 61.73 195.04 112.31 190.91 113.66 185.58 110.79"/>
+                <path d="M216.5,60.44l-24.16,50.58-5.33-2.87,29.49-47.71M211.39,57.28l-29.49,47.71,2.26,8.44,5.33,2.87,8.26-2.69,24.16-50.58-10.52-5.74h0Z"/>
+              </g>
+              <g>
+                <polygon points="180.25 107.91 179.3 103.43 214.13 58.6 219.05 62.02 189.55 109.72 185.58 110.79 180.25 107.91"/>
+                <path d="M216.5,60.44l-29.49,47.71-5.33-2.87,34.82-44.83M211.76,56.76l-34.82,44.83,1.89,8.96,5.33,2.87,7.95-2.13,29.49-47.71-9.84-6.84h0Z"/>
+              </g>
+            </g>
+            <g>
+              <polygon points="178.81 116.67 178.67 105.31 183.1 102.63 193.52 108.25 193.56 113.51 183.27 119.26 178.81 116.67"/>
+              <path d="M181.67,105.27l10.42,5.62-10.29,5.75-.13-11.37M184.52,99.99l-8.85,5.35.13,11.37,8.93,5.17,10.29-5.75-.08-10.52-10.42-5.62h0Z"/>
+            </g>
+          </g>
+          <g>
+            <g>
+              <g>
+                <polygon class="cls-1" points="48.87 116.4 48.87 110.65 51.87 107.65 110.86 107.65 111.15 113.63 52.16 119.38 48.87 116.4"/>
+                <path d="M110.86,110.65l-58.99,5.75v-5.75h58.99M110.86,104.65h-58.99l-6,6v5.75l6.58,5.97,58.99-5.75-.58-11.97h0Z"/>
+              </g>
+              <g>
+                <polygon points="51.87 113.65 48.87 110.65 48.87 104.9 52.16 101.92 111.15 107.66 110.86 113.65 51.87 113.65"/>
+                <path d="M51.87,104.9l58.99,5.75h-58.99v-5.75M52.46,98.93l-6.58,5.97v5.75l6,6h58.99l.58-11.97-58.99-5.75h0Z"/>
+              </g>
+            </g>
+            <g>
+              <g>
+                <polygon class="cls-1" points="14.48 159.78 38.64 109.2 42.77 107.85 48.1 110.72 49.23 114.94 19.73 162.65 14.48 159.78"/>
+                <path d="M41.35,110.49l5.33,2.87-29.49,47.71,24.16-50.58M44.19,105.21l-8.26,2.69-24.16,50.58,10.52,5.74,29.49-47.71-2.26-8.44-5.33-2.87h0Z"/>
+              </g>
+              <g>
+                <polygon points="14.63 159.5 44.13 111.79 48.1 110.72 53.43 113.6 54.38 118.08 19.55 162.91 14.63 159.5"/>
+                <path d="M46.68,113.36l5.33,2.87-34.82,44.83,29.49-47.71M49.52,108.08l-7.95,2.13-29.49,47.71,9.84,6.84,34.82-44.83-1.89-8.96-5.33-2.87h0Z"/>
+              </g>
+            </g>
+            <g>
+              <g>
+                <polygon class="cls-1" points="38.64 112.07 14.48 61.49 19.73 58.62 49.23 106.33 48.1 110.54 42.77 113.42 38.64 112.07"/>
+                <path d="M17.18,60.19l29.49,47.71-5.33,2.87-24.16-50.58M22.29,57.04l-10.52,5.74,24.16,50.58,8.26,2.69,5.33-2.87,2.26-8.44-29.49-47.71h0Z"/>
+              </g>
+              <g>
+                <polygon points="44.13 109.48 14.63 61.77 19.55 58.35 54.38 103.19 53.43 107.67 48.1 110.54 44.13 109.48"/>
+                <path d="M17.18,60.19l34.82,44.83-5.33,2.87-29.49-47.71M21.92,56.51l-9.84,6.84,29.49,47.71,7.95,2.13,5.33-2.87,1.89-8.96L21.92,56.51h0Z"/>
+              </g>
+            </g>
+            <g>
+              <polygon points="40.12 113.27 40.16 108.01 50.58 102.39 55.01 105.06 54.87 116.43 50.41 119.02 40.12 113.27"/>
+              <path d="M52.01,105.03l-.13,11.37-10.29-5.75,10.42-5.62M49.16,99.75l-10.42,5.62-.08,10.52,10.29,5.75,8.93-5.17.13-11.37-8.85-5.35h0Z"/>
+            </g>
+          </g>
+          <g>
+            <g>
+              <g>
+                <g>
+                  <polygon class="cls-1" points="20.92 59.92 21.21 53.93 80.2 53.93 83.2 56.93 83.2 62.6 79.91 65.59 20.92 59.92"/>
+                  <path d="M80.2,56.93v5.67l-58.99-5.67h58.99M80.2,50.93H21.21l-.57,11.97,58.99,5.67,6.57-5.97v-5.67l-6-6h0Z"/>
+                </g>
+                <g>
+                  <polygon points="21.21 59.93 20.92 53.95 79.91 48.28 83.2 51.27 83.2 56.93 80.2 59.93 21.21 59.93"/>
+                  <path d="M80.2,51.27v5.67H21.21l58.99-5.67M79.62,45.29l-58.99,5.67.57,11.97h58.99l6-6v-5.67l-6.57-5.97h0Z"/>
+                </g>
+              </g>
+              <g>
+                <g>
+                  <polygon class="cls-1" points="82.85 61.21 83.98 56.96 89.31 54.13 93.42 55.47 117.59 105.36 112.35 108.26 82.85 61.21"/>
+                  <path d="M90.72,56.78l24.16,49.89-29.49-47.05,5.33-2.83M87.91,51.48l-5.33,2.83-2.27,8.48,29.49,47.05,10.48-5.8-24.16-49.89-8.22-2.68h0Z"/>
+                </g>
+                <g>
+                  <polygon points="77.71 64.3 78.65 59.8 83.98 56.96 87.93 58.02 117.43 105.07 112.53 108.52 77.71 64.3"/>
+                  <path d="M85.39,59.61l29.49,47.05-34.82-44.22,5.33-2.83M82.58,54.31l-5.33,2.83-1.9,9.01,34.82,44.22,9.8-6.9-29.49-47.05-7.9-2.11h0Z"/>
+                </g>
+              </g>
+              <g>
+                <g>
+                  <polygon class="cls-1" points="83.98 56.88 82.85 52.63 112.35 5.58 117.59 8.48 93.42 58.37 89.31 59.71 83.98 56.88"/>
+                  <path d="M114.89,7.17l-24.16,49.89-5.33-2.83L114.89,7.17M109.8,3.98l-29.49,47.05,2.27,8.48,5.33,2.83,8.22-2.68,24.16-49.89-10.48-5.8h0Z"/>
+                </g>
+                <g>
+                  <polygon points="78.65 54.04 77.71 49.54 112.53 5.32 117.43 8.76 87.93 55.82 83.98 56.88 78.65 54.04"/>
+                  <path d="M114.89,7.17l-29.49,47.05-5.33-2.83L114.89,7.17M110.17,3.46l-34.82,44.22,1.9,9.01,5.33,2.83,7.9-2.11,29.49-47.05-9.8-6.9h0Z"/>
+                </g>
+              </g>
+              <g>
+                <polygon points="77.2 62.64 77.06 51.43 81.47 48.74 91.89 54.29 91.93 59.56 81.64 65.23 77.2 62.64"/>
+                <path d="M80.06,51.39l10.42,5.54-10.29,5.67-.13-11.21M82.88,46.09l-8.82,5.37.13,11.21,8.89,5.18,10.29-5.67-.08-10.55-10.42-5.54h0Z"/>
+              </g>
+            </g>
+            <g>
+              <g>
+                <g>
+                  <polygon class="cls-1" points="153.81 59.9 150.81 56.9 150.81 51.23 154.1 48.25 213.09 53.92 212.8 59.9 153.81 59.9"/>
+                  <path d="M153.81,51.23l58.99,5.67h-58.99v-5.67M154.38,45.26l-6.57,5.97v5.67l6,6h58.99l.57-11.97-58.99-5.67h0Z"/>
+                </g>
+                <g>
+                  <polygon points="150.81 62.57 150.81 56.9 153.81 53.9 212.8 53.9 213.09 59.89 154.1 65.56 150.81 62.57"/>
+                  <path d="M212.8,56.9l-58.99,5.67v-5.67h58.99M212.8,50.9h-58.99l-6,6v5.67l6.57,5.97,58.99-5.67-.57-11.97h0Z"/>
+                </g>
+              </g>
+              <g>
+                <g>
+                  <polygon class="cls-1" points="140.58 58.37 116.42 8.48 121.66 5.58 151.16 52.63 150.02 56.88 144.69 59.71 140.58 58.37"/>
+                  <path d="M119.12,7.17l29.49,47.05-5.33,2.83L119.12,7.17M124.2,3.98l-10.48,5.8,24.16,49.89,8.22,2.68,5.33-2.83,2.27-8.48L124.2,3.98h0Z"/>
+                </g>
+                <g>
+                  <polygon points="146.07 55.82 116.58 8.76 121.47 5.32 156.3 49.54 155.35 54.04 150.02 56.87 146.07 55.82"/>
+                  <path d="M119.12,7.17l34.82,44.22-5.33,2.83L119.12,7.17M123.83,3.46l-9.8,6.9,29.49,47.05,7.9,2.11,5.33-2.83,1.9-9.01L123.83,3.46h0Z"/>
+                </g>
+              </g>
+              <g>
+                <g>
+                  <polygon class="cls-1" points="116.42 105.36 140.58 55.47 144.69 54.13 150.02 56.96 151.16 61.21 121.66 108.26 116.42 105.36"/>
+                  <path d="M143.28,56.78l5.33,2.83-29.49,47.05,24.16-49.89M146.1,51.48l-8.22,2.68-24.16,49.89,10.48,5.8,29.49-47.05-2.27-8.48-5.33-2.83h0Z"/>
+                </g>
+                <g>
+                  <polygon points="116.58 105.07 146.07 58.02 150.02 56.96 155.35 59.8 156.3 64.3 121.47 108.52 116.58 105.07"/>
+                  <path d="M148.61,59.61l5.33,2.83-34.82,44.22,29.49-47.05M151.43,54.31l-7.9,2.11-29.49,47.05,9.8,6.9,34.82-44.22-1.9-9.01-5.33-2.83h0Z"/>
+                </g>
+              </g>
+              <g>
+                <polygon points="142.11 59.55 142.07 54.28 152.36 48.61 156.81 51.2 156.94 62.41 152.53 65.1 142.11 59.55"/>
+                <path d="M153.81,51.23l.13,11.21-10.42-5.54,10.29-5.67M150.91,45.98l-10.29,5.67.08,10.55,10.42,5.54,8.82-5.37-.13-11.21-8.89-5.18h0Z"/>
+              </g>
+            </g>
+          </g>
+        </g>
+        <path d="M116.65,10c58.9,0,106.65,45.88,106.65,102.47s-47.75,102.47-106.65,102.47S10,169.06,10,112.47,57.75,10,116.65,10M116.65,0c-31.08,0-60.33,11.65-82.34,32.8C12.18,54.06,0,82.35,0,112.47s12.18,58.41,34.31,79.67c22.02,21.15,51.26,32.8,82.34,32.8s60.33-11.65,82.34-32.8c22.12-21.26,34.31-49.55,34.31-79.67s-12.18-58.41-34.31-79.67C176.98,11.65,147.73,0,116.65,0h0Z"/>
+      </svg>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#">Heading 1</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Heading 2</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Heading 3</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero-section">
+  <div class="container">
+    <h1 class="hero-title">Model 1</h1>
+    <p class="slogan">Drive the Future</p>
+    <a href="#" class="btn btn-primary btn-lg me-2">Discover More</a>
+  </div>
+</section>
+
+<!-- Main Section with Heading and Paragraph -->
+<section>
+  <div class="container">
+    <h2 class="section-heading">About Us</h2>
+    <p class="section-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae malesuada lorem, euismod semper nisi.</p>
+    <div class="text-center mb-4">
+      <a href="#" class="btn btn-primary me-2">Learn More</a>
+      <a href="#" class="btn btn-primary me-2">Contact Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- Full-Width Cards -->
+<section class="card-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 custom-card mb-3" style="background-image: url('#'); background-color: gray;">
+        <h3 class="card-title">Card 1</h3>
+        <a href="#" class="btn btn-dark">Button</a>
+      </div>
+      <div class="col-12 custom-card mb-3" style="background-image: url('#'); background-color: gray;">
+        <h3 class="card-title">Card 2</h3>
+        <a href="#" class="btn btn-dark">Button</a>
+      </div>
+      <div class="col-12 custom-card mb-3" style="background-image: url('#'); background-color: gray;">
+        <h3 class="card-title">Card 3</h3>
+        <a href="#" class="btn btn-dark">Button</a>
+      </div>
+      <div class="col-12 custom-card mb-3" style="background-image: url('#'); background-color: gray;">
+        <h3 class="card-title">Card 4</h3>
+        <a href="#" class="btn btn-dark">Button</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <p>&copy; 2024 Helios Motors. All rights reserved.</p>
+  <p>
+    <a href="#" class="text-decoration-none text-dark me-3">Privacy Policy</a>
+    <a href="#" class="text-decoration-none text-dark">Terms of Service</a>
+  </p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
